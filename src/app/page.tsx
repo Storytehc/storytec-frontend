@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import profilePic from '../../public/DefaultProfile.png';
 
 
 const SpinningLogo = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-12 bg-backgroundColor">
+    <main className="flex min-h-screen flex-col items-center justify-center p-12 bg-customBlue">
       <Image
         src="/icon.svg"
         alt="StoryTech Logo"
@@ -20,7 +21,7 @@ const SpinningLogo = () => {
 };
 
 export default function Home() {
-  // Set the timer that displays the default logo page for 3 seconds then displays the home page.
+  // Set the timer that displays the default logo page for 2.5 seconds then displays the home page.
   const delayInMilliseconds = 2500;
   const [switchPage, setSwitchPage] = useState<boolean>(false);
   setTimeout(()=> {setSwitchPage(true)}, delayInMilliseconds);
@@ -33,7 +34,45 @@ export default function Home() {
 
 const HomePage = () => {
   return(
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-backgroundColor">
+      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
+        <div className="fixed left-0 top-0 grid grid-cols-3 gap-4 pb-6 pt-8 w-full place-items-center">
+          <div className="flex flex-row items-center gap-2">
+            <Image
+              src={profilePic}
+              alt="Profile Picture"
+              className="border-1 border-blue-500 rounded-full"
+              priority
+              width={30}
+              height={30}
+            />
+            <div>
+              <p className="text-black">Welcome</p>
+              <p className="font-bold text-black">Tunji.</p>
+            </div>    
+          </div>
+          <Image
+            src="/icon.svg"
+            alt="StoryTech Logo"
+            width={26}
+            height={26}
+            priority
+          />
+          <Image
+            src="/toggle.svg"
+            alt="Night Mode Toggle"
+            className=""
+            width={26}
+            height={26}
+            priority
+          />
+        </div>
+      </div>
+    </main>
+  );
+};
+
+{/* <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
@@ -139,8 +178,4 @@ const HomePage = () => {
           </p>
         </a>
       </div>
-    </main>
-  );
-};
-
-{}
+    </main> */}
