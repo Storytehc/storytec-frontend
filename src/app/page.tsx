@@ -1,7 +1,38 @@
+'use client'
+
 import Image from "next/image";
+import { useState } from "react";
+
+
+const SpinningLogo = () => {
+  return (
+    <main className="flex min-h-screen flex-col items-center justify-center p-12 bg-backgroundColor">
+      <Image
+        src="/icon.svg"
+        alt="StoryTech Logo"
+        className="spinning-element"
+        width={100}
+        height={24}
+        priority
+      />
+    </main>
+  );
+};
 
 export default function Home() {
+  // Set the timer that displays the default logo page for 3 seconds then displays the home page.
+  const delayInMilliseconds = 2500;
+  const [switchPage, setSwitchPage] = useState<boolean>(false);
+  setTimeout(()=> {setSwitchPage(true)}, delayInMilliseconds);
   return (
+    <>
+      { switchPage ? <HomePage/> : <SpinningLogo/>}
+    </>
+  );
+};
+
+const HomePage = () => {
+  return(
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
@@ -110,4 +141,6 @@ export default function Home() {
       </div>
     </main>
   );
-}
+};
+
+{}
