@@ -61,7 +61,7 @@ const HomePage = () => {
           <Image
             src="/toggle.svg"
             alt="Night Mode Toggle"
-            className=""
+            className="mr-[-50px]"
             width={26}
             height={26}
             priority
