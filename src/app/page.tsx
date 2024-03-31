@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import profilePic from '../../public/DefaultProfile.png';
-import progressBar from '../../public/Progress bar.svg';
+import progressBar from '../../public/progress-bar.svg';
 import chart from '../../public/chart.svg';
 
 
@@ -161,19 +161,19 @@ const HomePage = () => {
           />
         </div>
         <div className="flex flex-col gap-1 items-start p-2">
-          <div className="flex flex-row">
-            <p className="text-primaryColor text-xs text-bold w-20">Feb 02:</p>
-            <p className="text-black text-xs ml-[-18px]">Brain fried today! Finally wrapped my head around coding functions.
+          <div className="flex flex-row gap-1">
+            <p className="text-primaryColor text-xs text-bold whitespace-nowrap iniline">Feb 02:</p>
+            <p className="text-black text-xs iniline">Brain fried today! Finally wrapped my head around coding functions.
             </p>
           </div>
-          <div className="flex flex-row">
-            <p className="text-primaryColor text-xs text-bold w-20">Feb 03:</p>
-            <p className="text-black text-xs ml-[-18px]">A few lines of code and suddenly the program knows what to do next!
+          <div className="flex flex-row gap-1">
+            <p className="text-primaryColor text-xs text-bold whitespace-nowrap iniline">Feb 03:</p>
+            <p className="text-black text-xs iniline">A few lines of code and suddenly the program knows what to do next!
             </p>
           </div>
-          <div className="flex flex-row">
-            <p className="text-primaryColor text-xs text-bold w-20">Feb 04:</p>
-            <p className="text-black text-xs ml-[-32px]">Learning the principle of User experience.
+          <div className="flex flex-row gap-1">
+            <p className="text-primaryColor text-xs text-bold whitespace-nowrap iniline">Feb 04:</p>
+            <p className="text-black text-xs inline">Learning the principle of User experience.
             </p>
           </div>
         </div>
