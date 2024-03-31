@@ -15,7 +15,11 @@ const config: Config = {
       },
       colors: {
         'customBlue': '#E0EBFD',
-        'backgroundColor': '#F6F6F6'
+        'backgroundColor': '#F6F6F6',
+        'text-500': '#8D8D8D',
+        'primaryColor': '#3D7CDB',
+        'blue-100':'#E0EBFD',
+        'blue-400' : '#8DB2E9'
       }
     },
   },
