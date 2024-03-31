@@ -94,7 +94,7 @@ const HomePage = () => {
                 height={25}
                 priority
                 />
-              <p className="text-lg text-bold">Academic Path</p>
+              <p className="text-lg text-bold whitespace-nowrap">Academic Path</p>
             </div>
             <button className='p-2 bg-backgroundColor rounded border text-primaryColor text-sm' type="button">Continue</button>
           </div>
@@ -123,7 +123,7 @@ const HomePage = () => {
                 height={25}
                 priority
                 />
-              <p className="text-lg text-bold">High Tech Path</p>
+              <p className="text-lg text-bold whitespace-nowrap">High Tech Path</p>
             </div>
             <button className='p-2 bg-backgroundColor rounded border text-primaryColor text-sm' type="button">Continue</button>
           </div>
