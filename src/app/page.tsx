@@ -5,6 +5,9 @@ import { useState } from "react";
 import profilePic from '../../public/DefaultProfile.png';
 import progressBar from '../../public/progress-bar.svg';
 import chart from '../../public/chart.svg';
+import intersect from '../../public/Intersect.svg';
+import intersect2 from '../../public/Intersect2.svg';
+
 
 
 const SpinningLogo = () => {
@@ -101,7 +104,7 @@ const HomePage = () => {
             <p className="text-sm bg-blue-400 rounded border border-blue-400 mr-6">1/30</p>
             </div>
             <Image
-                src="/intersect.svg"
+                src={intersect}
                 alt="Academic Icon"
                 width={165}
                 height={120}
@@ -130,7 +133,7 @@ const HomePage = () => {
             <p className="text-sm bg-blue-400 rounded border border-blue-400 mr-4">10/10</p>
             </div>
             <Image
-                src="/intersect2.svg"
+                src={intersect2}
                 alt="Academic Icon"
                 className="mt-[-8px]"
                 width={165}
